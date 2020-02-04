@@ -10,13 +10,12 @@
 //
 //    @PostMapping("/create", produces = [MediaType.APPLICATION_JSON_VALUE])
 //    @ResponseStatus(HttpStatus.CREATED)
-//    fun create(@RequestBody req: Todo): Todo = todoService.create(req)
+//    fun create(@RequestBody req: Todo) = todoService.create(req)
 //
 //    @GetMapping("/{id}", produces = [MediaType.APPLICATION_JSON_VALUE])
-//    fun getById(@PathVariable("id") id: Long): Todo = todoService.getByIdKtl(id)
+//    fun getById(@PathVariable("id") id: Long) = todoService.getByIdKtl(id)
 //
 //    @PatchMapping("/{id}", produces = [MediaType.APPLICATION_JSON_VALUE])
-//    fun updateTodo(@PathVariable("id") id: Long, @RequestBody req: UpdateTodoRequest): Todo
-//            = todoService.updateTodo(id, req)
+//    fun updateTodo(@PathVariable("id") id: Long, @RequestBody req: UpdateTodoRequest) = todoService.updateTodo(id, req)
 //
 //}

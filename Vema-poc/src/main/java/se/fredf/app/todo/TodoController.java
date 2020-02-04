@@ -22,8 +22,8 @@ public class TodoController {
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    Mono<Todo> getById(@PathVariable("id") final long id) {
-        return todoService.rxGetById(id);
+    Todo getById(@PathVariable("id") final long id) {
+        return todoService.getByIdOptional(id);
     }
 
     @PatchMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
