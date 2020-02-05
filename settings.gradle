@@ -1,0 +1,5 @@
+rootProject.name = 'todo-spring'
+
+include 'eureka-server'
+include 'Vema-poc'
+include 'feign-client'

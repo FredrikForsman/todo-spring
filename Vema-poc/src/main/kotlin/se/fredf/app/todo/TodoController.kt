@@ -53,4 +53,9 @@ class TodoController(private val todoService: TodoService) {
     fun updateTodo(@PathVariable("id") id: Long, @RequestBody req: UpdateTodoRequest): Todo =
         todoService.updateTodo(id, req)
 
+    @GetMapping("/get")
+    fun feignTest(): String {
+        return "Hello world"
+    }
+
 }

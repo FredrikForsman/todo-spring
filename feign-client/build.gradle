@@ -23,21 +23,17 @@ repositories {
 }
 
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
-    implementation "org.springframework.boot:spring-boot-starter-webflux"
-    
+
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.2.1.RELEASE'
-    implementation "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:2.2.1.RELEASE"
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.1.RELEASE'
     implementation "javax.xml.bind:jaxb-api:2.3.0"
     implementation "com.sun.xml.bind:jaxb-core:2.3.0"
     implementation "com.sun.xml.bind:jaxb-impl:2.3.0"
-    
-    implementation "io.springfox:springfox-swagger2:2.9.2"
-    implementation "io.springfox:springfox-swagger-ui:2.9.2"
-
-//    runtimeOnly 'com.h2database:h2'
-    runtimeOnly 'mysql:mysql-connector-java'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation "org.junit.jupiter:junit-jupiter-engine:5.1.0"
