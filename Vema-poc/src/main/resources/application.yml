@@ -10,4 +10,4 @@ spring:
       ddlAuto: create-drop
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        dialect: org.hibernate.dialect.MySQL5Dialect

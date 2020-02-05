@@ -8,11 +8,10 @@ import se.fredf.app.exception.ResourceNotFoundException
 @Service
 class TodoServiceImpl(private val todoRepository: TodoRepository) : TodoService {
 
-    override fun create(todo: Todo): Todo {
-//        return catRepository.findByName(req.name)?.let {
-//            throw CatAlreadyExistException("A todo with name: ${req.name} already exist")
-//        } ?: catRepository.save(Cat(req.name))
-        return todoRepository.save(todo)
+    override fun create(req: CreateTodoRequest): Todo {
+        return todoRepository.findByName(req.name)?.let {
+            throw TodoAlreadyExistException("A todo with name: ${req.name} already exist")
+        } ?: todoRepository.save(Todo(req.name))
     }
 
     override fun rxGetById(id: Long): Mono<Todo> {
