@@ -10,8 +10,8 @@ interface TodoClient {
     fun getTodo(@PathVariable("id") id: Long): Any
 
     @PostMapping("/todos")
-    fun create(@RequestBody req: CreateTodoRequest): Any
+    fun create(req: CreateTodoRequest): Any
 
-    @PatchMapping("/todos/{id}")
+    @PutMapping("/todos/{id}")
     fun updateTodo(@PathVariable("id") id: Long, @RequestBody req: UpdateTodoRequest): Any
 }

@@ -34,7 +34,7 @@ class TodoController(private val todoClient: TodoClient) {
     fun getTodoById(@PathVariable("id") id: Long) = todoClient.getTodo(id)
 
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     @ApiOperation(
             value = "Update a Todo"
     )
