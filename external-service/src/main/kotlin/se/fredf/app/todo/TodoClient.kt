@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 
-@FeignClient("TodoClient")
+@FeignClient("todo-service")
 interface TodoClient {
 
     @GetMapping("/todos/get")
